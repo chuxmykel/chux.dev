@@ -29,12 +29,11 @@ jobs:
         uses: ./.github/actions/build-app
       - name: Publish site
         run: |
-          git config --global user.password "${GITHUB_TOKEN}"
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/chuxmykel.github.io.git
-          yarn deploy -u "github-actions-bot <support+actions@github.com>" --repo \"https://${{ github.actor }}:${GITHUB_TOKEN}@github.com/chuxmykel/chuxmykel.github.io.git\"
+          yarn deploy -u "github-actions-bot <support+actions@github.com>" --repo \"git@github.com:chuxmykel/chuxmykel.github.io.git\"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
           # git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           # git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/chuxmykel.github.io.git
-          # yarn deploy -u "github-actions-bot <support+actions@github.com>" --repo \"git@github.com:chuxmykel/chuxmykel.github.io.git\"
+          # yarn deploy -u "github-actions-bot <support+actions@github.com>" --repo \"https://${{ github.actor }}:${GITHUB_TOKEN}@github.com/chuxmykel/chuxmykel.github.io.git\"
