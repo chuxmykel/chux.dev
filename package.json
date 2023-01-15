@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://chuxmykel.github.io/",
+  "homepage": "https://chuxmykel.github.io/chux.dev",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
