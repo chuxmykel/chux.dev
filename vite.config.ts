@@ -12,5 +12,5 @@ export default defineConfig({
       reporter: ["text", "json", "html"],
     },
   },
-  // base: "/chux.dev/"
+  base: "/chux.dev/"
 });

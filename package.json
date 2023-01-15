@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "deploy": "gh-pages -d dist -t true"
+    "deploy": "gh-pages -d dist --branch main --repo \"https://github.com/chuxmykel/chuxmykel.github.io.git\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
