@@ -1,0 +1,21 @@
+name: Build app
+description: A script to build the app and generate the artifacts
+runs:
+  using: composite
+  steps:
+    - name:  Checkout the repo onto the runner. 
+      uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.13.0'
+        cache: 'yarn'
+    - run: yarn install --frozen-lockfile
+      shell: bash
+    - run: yarn build
+      shell: bash
+    - name: Upload production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: 'dist/'

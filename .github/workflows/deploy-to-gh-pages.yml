@@ -1,0 +1,35 @@
+# A simple workflow to deploy my website to github pages
+
+name: Deploy app
+run-name: ${{ github.actor }} triggered a deployment
+on: 
+  # Runs on pushes targeting the main branch
+  push:
+    branches: [ 'develop', 'main' ]
+
+  pull_request:
+    branches: [ 'develop', 'main' ]
+
+  # Allows us to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Checkout the repo onto the runner. 
+        uses: actions/checkout@v3
+      - name: Build app
+        uses: ./.github/actions/build-app
+      - name: Publish site
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn deploy -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
