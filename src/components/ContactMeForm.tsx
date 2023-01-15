@@ -111,14 +111,14 @@ export function ContactMeForm() {
   return (
     <div className="flex flex-col items-center w-full" id="contact-me">
       <h3 className="font-extrabold text-3xl text-slate-700">Contact Me!</h3>
-      <p className="p-4 font-medium italic">
+      <p className="max-sm:px-0 p-4 font-medium italic">
         Do you have any questions❓, business proposal📝 or just want to say
         hi👋🏿, please drop me a message📩.
       </p>
       <div className="mb-10 w-full">
         <form
           onSubmit={handleSubmit}
-          className="w-full flex flex-col gap-4 p-4"
+          className="w-full flex flex-col gap-4 max-sm:px-0 p-4"
         >
           <TextField
             label="Name"

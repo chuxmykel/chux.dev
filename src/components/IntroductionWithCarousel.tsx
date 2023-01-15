@@ -56,7 +56,7 @@ export function IntroductionWithCarousel() {
     });
   }
   return (
-    <div className="flex flex-col items-start gap-5 min-w-full h-48">
+    <div className="flex flex-col items-start gap-5 min-w-full max-sm:h-60 h-52">
       <div className="min-w-full min-h-full">
         <h1 className="text-5xl font-extrabold text-slate-700 mb-4">
           Hello! 👋🏿

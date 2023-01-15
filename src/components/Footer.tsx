@@ -6,11 +6,11 @@ export function Footer() {
     <>
       <ContactMeForm />
 
-      <div className="px-4">
+      <div className="max-sm:px-0 px-4">
         <SocialLinks />
       </div>
 
-      <div className="mt-28 text-right px-4 pb-4">
+      <div className="mt-28 max-sm:text-left text-right max-sm:px-0 px-4 pb-4">
         <p>
           <span className="text-xl">&copy;</span> Ngwobia, Chukwudi Mike{" "}
           {new Date().getFullYear()}

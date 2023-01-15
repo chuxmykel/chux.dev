@@ -21,7 +21,7 @@ export function Nav() {
   }
   return (
     <>
-      <header className="px-4 md:hidden">
+      <header className="max-sm:px-0 px-4 md:hidden">
         <div className="flex justify-between items-center">
           <Logo />
           <button onClick={toggleMenu}>
@@ -30,7 +30,7 @@ export function Nav() {
           </button>
         </div>
         {showMenu && (
-          <nav className="mt-2 absolute right-0 w-auto" onClick={toggleMenu}>
+          <nav className="mt-2 absolute -right-2 w-auto" onClick={toggleMenu}>
             <Menu menuItems={menuItems} />
           </nav>
         )}
