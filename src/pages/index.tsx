@@ -7,11 +7,11 @@ export function Home() {
     <>
       <div className="h-screen flex items-center">
         <div className="w-full md:flex items-center">
-          <div className="py-8 md:px-2 md:py-0 md:w-1/2 md:h-1/2 md:order-2">
+          <div className="py-8 md:py-0 md:w-1/2 md:h-1/2 md:order-2">
             <SoftwareEngineerSVG />
           </div>
 
-          <div className="md:px-2 mb-40 md:mb-0 md:order-1 md:w-[50%]">
+          <div className="mb-40 md:mb-0 md:order-1 md:w-[50%]">
             <IntroductionWithCarousel />
           </div>
         </div>
