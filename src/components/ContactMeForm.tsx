@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MdSend } from "react-icons/md";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+
+import { ThemeContext } from "../context/theme.context";
 
 interface FormState {
   name?: string;
@@ -12,6 +16,12 @@ interface FormState {
 }
 
 export function ContactMeForm() {
+  const { theme } = useContext(ThemeContext);
+  const formTheme = createTheme({
+    palette: {
+      mode: theme,
+    },
+  });
   const initialFormState = {
     name: "",
     email: "",
@@ -110,7 +120,9 @@ export function ContactMeForm() {
 
   return (
     <div className="flex flex-col items-center w-full" id="contact-me">
-      <h3 className="font-extrabold text-3xl text-slate-700 dark:text-slate-200">Contact Me!</h3>
+      <h3 className="font-extrabold text-3xl text-slate-700 dark:text-slate-200">
+        Contact Me!
+      </h3>
       <p className="py-4 font-medium italic text-slate-900 dark:text-slate-50">
         Do you have any questions❓, business proposal📝 or just want to say
         hi👋🏿, please drop me a message📩.
@@ -120,58 +132,61 @@ export function ContactMeForm() {
           onSubmit={handleSubmit}
           className="w-full flex flex-col gap-4 py-4"
         >
-          <TextField
-            label="Name"
-            variant="outlined"
-            type={"text"}
-            required
-            className="w-full"
-            name="name"
-            value={formState.name}
-            onChange={handleChange}
-          />
-
-          <TextField
-            label="Email"
-            variant="outlined"
-            type={"email"}
-            required
-            className="w-full"
-            name="email"
-            value={formState.email}
-            onChange={handleChange}
-            error={!emailIsValid}
-            helperText={!emailIsValid && "Please provide a valid email"}
-          />
-
-          <TextField
-            label="Message"
-            variant="outlined"
-            type={"text"}
-            required
-            multiline
-            rows={4}
-            className="w-full"
-            name="message"
-            value={formState.message}
-            onChange={handleChange}
-            error={!messageIsValid}
-            helperText={!messageIsValid && "Message too short."}
-          />
-          <p className="text-red-600 text-sm text-center">{errorMessage}</p>
-          <div className={`${!formIsValid && "hover:cursor-not-allowed"}`}>
-            <Button
+          <ThemeProvider theme={formTheme}>
+            <CssBaseline />
+            <TextField
+              label="Name"
               variant="outlined"
-              size="large"
-              type="submit"
-              disabled={!formIsValid || loading}
-              endIcon={
-                loading ? <FaSpinner className="animate-spin" /> : <MdSend />
-              }
-            >
-              Send
-            </Button>
-          </div>
+              type={"text"}
+              required
+              className="w-full"
+              name="name"
+              value={formState.name}
+              onChange={handleChange}
+            />
+
+            <TextField
+              label="Email"
+              variant="outlined"
+              type={"email"}
+              required
+              className="w-full"
+              name="email"
+              value={formState.email}
+              onChange={handleChange}
+              error={!emailIsValid}
+              helperText={!emailIsValid && "Please provide a valid email"}
+            />
+
+            <TextField
+              label="Message"
+              variant="outlined"
+              type={"text"}
+              required
+              multiline
+              rows={4}
+              className="w-full"
+              name="message"
+              value={formState.message}
+              onChange={handleChange}
+              error={!messageIsValid}
+              helperText={!messageIsValid && "Message too short."}
+            />
+            <p className="text-red-600 text-sm text-center">{errorMessage}</p>
+            <div className={`${!formIsValid && "hover:cursor-not-allowed"}`}>
+              <Button
+                variant="outlined"
+                size="large"
+                type="submit"
+                disabled={!formIsValid || loading}
+                endIcon={
+                  loading ? <FaSpinner className="animate-spin" /> : <MdSend />
+                }
+              >
+                Send
+              </Button>
+            </div>
+          </ThemeProvider>
         </form>
       </div>
     </div>

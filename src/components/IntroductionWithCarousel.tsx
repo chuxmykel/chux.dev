@@ -76,7 +76,7 @@ export function IntroductionWithCarousel() {
 
       <div className="mt-4">
         <HashLink to="#contact-me" smooth>
-          <button className="py-2 px-4 bg-slate-800 dark:bg-slate-100 text-slate-50 dark:text-slate-900 rounded-md active:scale-x-95 hover:animate-pulse">
+          <button className="py-2 px-4 bg-slate-800 dark:bg-slate-100 text-slate-50 dark:text-slate-900 rounded-md active:scale-x-95 hover:animate-pulse text-xl font-semibold">
             Contact Me
           </button>
         </HashLink>

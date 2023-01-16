@@ -64,7 +64,7 @@ interface MenuItem {
 function Menu({ menuItems }: MenuProps) {
   const { toggleTheme } = useContext(ThemeContext);
   return (
-    <div className="flex justify-end items-center gap-1">
+    <div className="flex items-center gap-4">
       <ul className="bg-slate-100 dark:bg-gray-900 rounded-md w-64 p-8 md:hidden">
         {menuItems.map((menuItem) => {
           const key = JSON.stringify(menuItem);
@@ -95,12 +95,12 @@ function Menu({ menuItems }: MenuProps) {
           );
         })}
 
-        <div className="flex justify-center pt-2" onClick={toggleTheme}>
+        <button className="flex w-full justify-center pt-2" onClick={toggleTheme}>
           <div className={`block md:hidden p-2 ${commonLinkClasses}`}>
             <FaMoon className="h-4 w-4 dark:hidden" />
             <FaSun className="h-4 w-4 hidden dark:block" />
           </div>
-        </div>
+        </button>
       </ul>
 
       <ul className="hidden md:flex gap-2 justify-end items-center">
@@ -133,13 +133,13 @@ function Menu({ menuItems }: MenuProps) {
           );
         })}
       </ul>
-      <div
+      <button
         className={`hidden md:block p-2 ${commonLinkClasses}`}
         onClick={toggleTheme}
       >
         <FaMoon className="h-4 w-4 dark:hidden" />
         <FaSun className="h-4 w-4 hidden dark:block" />
-      </div>
+      </button>
     </div>
   );
 }
@@ -182,7 +182,7 @@ function RegularLink({ href, label }: LinkProps) {
 function CommonListItem({ label }: { label: string }) {
   return (
     <li
-      className={`py-1 px-3 text-center w-full text-lg font-medium ${commonLinkClasses}`}
+      className={`py-1 px-2 text-center w-full text-lg font-medium ${commonLinkClasses}`}
     >
       {label}
     </li>
