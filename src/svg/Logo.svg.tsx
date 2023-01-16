@@ -1,4 +1,9 @@
+import { useContext } from "react";
+
+import { ThemeContext } from "../context/theme.context";
+
 export function Logo() {
+  const { theme } = useContext(ThemeContext);
   return (
     <svg
       version="1.0"
@@ -8,10 +13,7 @@ export function Logo() {
     >
       <g
         transform="translate(0.000000,209.000000) scale(0.100000,-0.100000)"
-        fill="#334155"
-
-        // TODO: For Dark mode
-        // fill="#E2E8F0"
+        fill={`${theme === "dark" ? "#E2E8F0" : "#334155"}`}
         stroke="none"
       >
         <path

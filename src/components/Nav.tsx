@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FaHamburger, FaMoon, FaSun, FaWindowClose } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import { ThemeContext } from "../context/theme.context";
 import { Logo } from "./Logo";
 
 export function Nav() {
@@ -61,6 +62,7 @@ interface MenuItem {
 }
 
 function Menu({ menuItems }: MenuProps) {
+  const { toggleTheme } = useContext(ThemeContext);
   return (
     <div className="flex justify-end items-center gap-1">
       <ul className="bg-slate-100 dark:bg-gray-900 rounded-md w-64 p-8 md:hidden">
@@ -93,7 +95,7 @@ function Menu({ menuItems }: MenuProps) {
           );
         })}
 
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-center pt-2" onClick={toggleTheme}>
           <div className={`block md:hidden p-2 ${commonLinkClasses}`}>
             <FaMoon className="h-4 w-4 dark:hidden" />
             <FaSun className="h-4 w-4 hidden dark:block" />
@@ -131,7 +133,10 @@ function Menu({ menuItems }: MenuProps) {
           );
         })}
       </ul>
-      <div className={`hidden md:block p-2 ${commonLinkClasses}`}>
+      <div
+        className={`hidden md:block p-2 ${commonLinkClasses}`}
+        onClick={toggleTheme}
+      >
         <FaMoon className="h-4 w-4 dark:hidden" />
         <FaSun className="h-4 w-4 hidden dark:block" />
       </div>
@@ -140,7 +145,7 @@ function Menu({ menuItems }: MenuProps) {
 }
 
 const commonLinkClasses =
-  "hover:bg-slate-100 dark:hover:bg-slate-700 dark:text-slate-400 rounded-full cursor-pointer";
+  "hover:bg-slate-300 dark:hover:bg-slate-700 dark:text-slate-400 rounded-full cursor-pointer";
 
 interface LinkProps {
   label: string;
