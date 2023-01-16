@@ -22,7 +22,7 @@ interface ISocialLink {
 }
 
 function SocialLink({ Icon, url }: ISocialLink) {
-  const socialLinkClasses = "h-8 w-8 hover:animate-bounce transition-all";
+  const socialLinkClasses = "h-8 w-8 hover:animate-bounce transition-all text-slate-900 dark:text-slate-50";
   return (
     <>
       <a href={url} target="_blank">

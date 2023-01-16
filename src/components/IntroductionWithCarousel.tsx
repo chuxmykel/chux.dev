@@ -57,17 +57,18 @@ export function IntroductionWithCarousel() {
   }
   return (
     <div className="flex flex-col items-start gap-5 min-w-full max-sm:h-60 h-52">
-      <div className="min-w-full min-h-full">
-        <h1 className="text-5xl font-extrabold text-slate-700 mb-4">
-          Hello! 👋🏿
+      <div className="min-w-full min-h-full text-slate-900 dark:text-slate-50">
+        <h1 className="text-5xl font-extrabold text-slate-700 dark:text-slate-200 mb-4">
+          Hello! <span className="dark:hidden">👋🏿</span>
+          <span className="hidden dark:inline">👋</span>
         </h1>
         <p className="text-3xl">
           I am{" "}
-          <span className="bg-transparent hover:bg-slate-100 text-2xl cursor-pointer">
+          <span className="bg-transparent hover:bg-slate-200 dark:hover:bg-slate-700 text-2xl cursor-pointer">
             <Link to="/about">Chukwudi Ngwobia,</Link>
           </span>
         </p>
-        <span className="bg-slate-100 text-2xl font-medium px-1 italic">
+        <span className="bg-slate-200 dark:bg-slate-700 text-2xl font-medium px-1 italic">
           a {title}
         </span>
         <p className="text-3xl inline"> based in Nigeria.</p>
@@ -75,7 +76,7 @@ export function IntroductionWithCarousel() {
 
       <div className="mt-4">
         <HashLink to="#contact-me" smooth>
-          <button className="py-2 px-4 bg-slate-700 hover:bg-slate-600 text-white rounded-md active:scale-x-95 hover:animate-pulse">
+          <button className="py-2 px-4 bg-slate-800 dark:bg-slate-100 text-slate-50 dark:text-slate-900 rounded-md active:scale-x-95 hover:animate-pulse">
             Contact Me
           </button>
         </HashLink>

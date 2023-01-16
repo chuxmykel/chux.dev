@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaHamburger, FaMoon, FaWindowClose } from "react-icons/fa";
+import { FaHamburger, FaMoon, FaSun, FaWindowClose } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -19,14 +19,15 @@ export function Nav() {
   function toggleMenu() {
     setShowMenu((prevState) => !prevState);
   }
+  const hamburgerClasses = "h-8 w-8 text-slate-900 dark:text-slate-300";
   return (
     <>
       <header className="md:hidden">
         <div className="flex justify-between items-center">
           <Logo />
           <button onClick={toggleMenu}>
-            {!showMenu && <FaHamburger className="h-8 w-8" />}
-            {showMenu && <FaWindowClose className="h-8 w-8" />}
+            {!showMenu && <FaHamburger className={hamburgerClasses} />}
+            {showMenu && <FaWindowClose className={hamburgerClasses} />}
           </button>
         </div>
         {showMenu && (
@@ -62,7 +63,7 @@ interface MenuItem {
 function Menu({ menuItems }: MenuProps) {
   return (
     <div className="flex justify-end items-center gap-1">
-      <ul className="bg-slate-100 rounded-md w-64 p-8 md:hidden">
+      <ul className="bg-slate-100 dark:bg-gray-900 rounded-md w-64 p-8 md:hidden">
         {menuItems.map((menuItem) => {
           const key = JSON.stringify(menuItem);
           if (menuItem.external) {
@@ -93,8 +94,9 @@ function Menu({ menuItems }: MenuProps) {
         })}
 
         <div className="flex justify-center pt-2">
-          <div className="hover:bg-slate-100 rounded-full p-2">
-            <FaMoon className="block md:hidden h-4 w-4" />
+          <div className={`block md:hidden p-2 ${commonLinkClasses}`}>
+            <FaMoon className="h-4 w-4 dark:hidden" />
+            <FaSun className="h-4 w-4 hidden dark:block" />
           </div>
         </div>
       </ul>
@@ -129,12 +131,16 @@ function Menu({ menuItems }: MenuProps) {
           );
         })}
       </ul>
-      <div className="hover:bg-slate-100 rounded-full p-2 cursor-pointer">
-        <FaMoon className="hidden md:block h-4 w-4" />
+      <div className={`hidden md:block p-2 ${commonLinkClasses}`}>
+        <FaMoon className="h-4 w-4 dark:hidden" />
+        <FaSun className="h-4 w-4 hidden dark:block" />
       </div>
     </div>
   );
 }
+
+const commonLinkClasses =
+  "hover:bg-slate-100 dark:hover:bg-slate-700 dark:text-slate-400 rounded-full cursor-pointer";
 
 interface LinkProps {
   label: string;
@@ -170,7 +176,9 @@ function RegularLink({ href, label }: LinkProps) {
 
 function CommonListItem({ label }: { label: string }) {
   return (
-    <li className="py-1 px-3 hover:bg-slate-100 rounded-full text-center w-full text-lg font-medium">
+    <li
+      className={`py-1 px-3 text-center w-full text-lg font-medium ${commonLinkClasses}`}
+    >
       {label}
     </li>
   );

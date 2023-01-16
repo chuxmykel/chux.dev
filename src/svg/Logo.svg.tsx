@@ -8,7 +8,10 @@ export function Logo() {
     >
       <g
         transform="translate(0.000000,209.000000) scale(0.100000,-0.100000)"
-        fill="#000000"
+        fill="#334155"
+
+        // TODO: For Dark mode
+        // fill="#E2E8F0"
         stroke="none"
       >
         <path

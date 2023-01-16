@@ -7,7 +7,7 @@ import { ThankYou } from "./pages/ThankYou";
 
 export function App() {
   return (
-    <div className="flex justify-center items-center box-content">
+    <div className="flex justify-center items-center box-content bg-slate-100 dark:bg-slate-900">
       <div className="w-full md:w-[1140px] min-h-screen">
         <div className="px-2 pt-10 pb-12 font-source-code-pro">
           <Router>
