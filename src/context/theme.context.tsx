@@ -1,6 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 
-const defaultTheme = "dark";
+enum Themes {
+  light = "light",
+  dark = "dark",
+}
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const defaultTheme: Themes = prefersDarkScheme.matches
+  ? Themes.dark
+  : Themes.light;
 
 export const ThemeContext = createContext({
   theme: defaultTheme,
@@ -11,19 +18,30 @@ export function ThemeProvider({ children }: any) {
   const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
-    const userTheme = localStorage.getItem("theme") || defaultTheme;
-    setTheme(userTheme);
-    console.log("Rendered with theme===========> ", theme);
-  }, [theme]);
+    const userTheme: Themes = localStorage.getItem("theme") as Themes;
+    if (!userTheme) {
+      localStorage.setItem("theme", defaultTheme);
+      setTheme(defaultTheme);
+      return;
+    } else {
+      setTheme(userTheme);
+    }
+  });
 
   function toggleTheme() {
-    const newTheme = theme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", newTheme);
-    setTheme(newTheme);
+    const invertedTheme = invertTheme(theme);
+    localStorage.setItem("theme", invertedTheme);
+    setTheme(invertedTheme);
+  }
+
+  function invertTheme(theme: Themes) {
+    return theme === Themes.light ? Themes.dark : Themes.light;
   }
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={(theme === "dark" && "dark") || ""}>{children}</div>
+      <div className={(theme === Themes.dark && Themes.dark) || ""}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 }
