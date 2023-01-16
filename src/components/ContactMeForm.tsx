@@ -1,11 +1,11 @@
+import { useState } from "react";
 import { MdSend } from "react-icons/md";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
 
-interface IFormState {
+interface FormState {
   name?: string;
   email?: string;
   message?: string;
@@ -26,7 +26,7 @@ export function ContactMeForm() {
   const history = useHistory();
 
   function handleChange(event: any) {
-    function setState(updates: IFormState) {
+    function setState(updates: FormState) {
       setFormState((prevState) => ({ ...prevState, ...updates }));
     }
     const {
