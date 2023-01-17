@@ -9,9 +9,9 @@ export function About() {
         </h1>
 
         <p className="text-lg md:text-xl text-slate-900 dark:text-slate-50 pb-8">
-          I am a passionate full-stack software engineer with 4+ years of professional
-          experience working in high-performing, cross-cultural, distributed
-          engineering teams.
+          I am a passionate full-stack software engineer with 4+ years of
+          professional experience working in high-performing, cross-cultural,
+          distributed software engineering teams.
         </p>
 
         <p className="text-lg md:text-xl text-slate-900 dark:text-slate-50 pb-8">
@@ -57,12 +57,12 @@ export function About() {
         </p>
 
         <p className="text-lg md:text-xl text-slate-900 dark:text-slate-50 pb-8">
-          I love music, to listen and to play. The only sports I do not hate are
-          skating and swimming 😅
+          I love music. To listen and to play. The only sports I do not hate are
+          skating and swimming. 😅
         </p>
 
         <p className="text-lg md:text-xl text-slate-900 dark:text-slate-50 pb-8">
-          I also love to play chess. You can connect with me on
+          I also love to play chess. You can play some games (Correspondence) with me on
           <a
             className="text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-8"
             href="https://lichess.org/@/ChuxMyke"
@@ -87,7 +87,6 @@ export function About() {
             Let's connect. <span className="text-xl">🤝</span>
           </Link>
         </p>
-
       </div>
     </div>
   );
