@@ -1,16 +1,13 @@
-import { ContactMeForm } from "./ContactMeForm";
-import { SocialLinks } from "./SocialLinks";
+import { MdCopyright } from "react-icons/md";
 
 export function Footer() {
   return (
     <>
-      <ContactMeForm />
-      <SocialLinks />
       <div className="mt-28 max-sm:text-left text-right pb-4">
-        <p className="text-slate-300 dark:text-slate-700">
-          <span className="text-xl">&copy;</span> Ngwobia, Chukwudi Mike{" "}
-          {new Date().getFullYear()}
-        </p>
+        <span className="text-slate-300 dark:text-slate-700">
+          <MdCopyright className="inline -mt-1" />
+          {` ${new Date().getFullYear()} Copyright. Ngwobia, Chukwudi Mike`}
+        </span>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import { SoftwareEngineer as SoftwareEngineerSVG } from "../svg/SoftwareEngineer.svg";
 import { IntroductionWithCarousel } from "../components/IntroductionWithCarousel";
-import { Footer } from "../components/Footer";
+import { ContactMeForm } from "../components/ContactMeForm";
+import { SocialLinks } from "../components/SocialLinks";
 
 export function Home() {
   return (
@@ -16,7 +17,8 @@ export function Home() {
           </div>
         </div>
       </div>
-      <Footer />
+      <ContactMeForm />
+      <SocialLinks />
     </>
   );
 }

@@ -25,7 +25,7 @@ export function IntroductionWithCarousel() {
   }
 
   async function deleteTitle() {
-    for (let char of titles[titleIdx]) {
+    for (let _char of titles[titleIdx]) {
       setTitle((prevTitle) => prevTitle.slice(0, -1));
       await delay(50);
     }

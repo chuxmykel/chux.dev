@@ -7,6 +7,7 @@ import { Home } from "./pages";
 import { About } from "./pages/About";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ThankYou } from "./pages/ThankYou";
+import { Footer } from "./components/Footer";
 
 export function App() {
   return (
@@ -30,6 +31,7 @@ export function App() {
                   <NotFoundPage />
                 </Route>
               </Switch>
+              <Footer />
             </Router>
           </div>
         </div>

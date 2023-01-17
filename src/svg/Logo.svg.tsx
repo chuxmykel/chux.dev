@@ -13,7 +13,7 @@ export function Logo() {
     >
       <g
         transform="translate(0.000000,209.000000) scale(0.100000,-0.100000)"
-        fill={`${theme === "dark" ? "#E2E8F0" : "#334155"}`}
+        fill={`${theme === "dark" ? "#94A3B8" : "#334155"}`}
         stroke="none"
       >
         <path
