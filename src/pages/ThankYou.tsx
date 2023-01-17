@@ -1,4 +1,4 @@
-import { BackToHomePageButton } from "../components/BackToHomePageButton";
+import { BackToHomePageLink } from "../components/BackToHomePageLink";
 import { SocialLinks } from "../components/SocialLinks";
 
 export function ThankYou() {
@@ -19,7 +19,7 @@ export function ThankYou() {
         <SocialLinks />
       </div>
 
-      <BackToHomePageButton />
+      <BackToHomePageLink />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { BackToHomePageButton } from "../components/BackToHomePageButton";
+import { BackToHomePageLink } from "../components/BackToHomePageLink";
 import { NotFound404 } from "../svg/NotFound404.svg";
 
 export function NotFoundPage() {
@@ -18,7 +18,7 @@ export function NotFoundPage() {
         doesn't exist
       </p>
 
-      <BackToHomePageButton />
+      <BackToHomePageLink />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { BackToHomePageButton } from "../components/BackToHomePageButton";
+import { BackToHomePageLink } from "../components/BackToHomePageLink";
 
 export function WIP() {
   return (
@@ -6,7 +6,7 @@ export function WIP() {
       <h1 className="mb-20 text-5xl font-extrabold text-slate-700 dark:text-slate-200">
         This page is a WIP!
       </h1>
-      <BackToHomePageButton />
+      <BackToHomePageLink />
     </div>
   );
 }
