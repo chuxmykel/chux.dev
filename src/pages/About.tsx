@@ -9,7 +9,7 @@ export function About() {
         </h1>
 
         <p className="text-lg md:text-xl text-slate-900 dark:text-slate-50 pb-8">
-          I am a passionate full-stack software engineer with professional
+          I am a passionate full-stack software engineer with 4+ years of professional
           experience working in high-performing, cross-cultural, distributed
           engineering teams.
         </p>
