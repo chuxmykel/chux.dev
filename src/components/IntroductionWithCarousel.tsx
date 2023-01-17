@@ -63,9 +63,9 @@ export function IntroductionWithCarousel() {
           <span className="hidden dark:inline">👋</span>
         </h1>
         <p className="text-3xl">
-          I am{" "}
+          I am
           <span className="bg-transparent hover:bg-slate-200 dark:hover:bg-slate-700 text-2xl cursor-pointer">
-            <Link to="/about">Chukwudi Ngwobia,</Link>
+            <Link to="/about">{` Chukwudi Ngwobia,`}</Link>
           </span>
         </p>
         <span className="bg-slate-200 dark:bg-slate-700 text-2xl font-medium px-1 italic">
