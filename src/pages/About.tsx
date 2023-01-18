@@ -86,6 +86,7 @@ export function About() {
             <HashLink
               to="/#contact-me"
               className="text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-8"
+              smooth
             >
               I would love to connect and work together.{" "}
               <span className="text-xl">🤝</span>

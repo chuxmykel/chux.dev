@@ -4,28 +4,47 @@ import { BsMedium } from "react-icons/bs";
 export function SocialLinks() {
   return (
     <div className="flex gap-4">
-      <SocialLink url="https://github.com/chuxmykel" Icon={FaGithub} />
+      <SocialLink
+        url="https://github.com/chuxmykel"
+        Icon={FaGithub}
+        label="Github"
+      />
       <SocialLink
         url="https://www.linkedin.com/in/chukwudi-ngwobia/?original_referer="
         Icon={FaLinkedin}
+        label="Linkedin"
       />
-      <SocialLink url="https://medium.com/@ngwobiachukwudi" Icon={BsMedium} />
-      <SocialLink url="https://twitter.com/chuxmyk" Icon={FaTwitter} />
-      <SocialLink url="https://instagram.com/chuxmyk" Icon={FaInstagram} />
+      <SocialLink
+        url="https://medium.com/@ngwobiachukwudi"
+        Icon={BsMedium}
+        label="Medium"
+      />
+      <SocialLink
+        url="https://twitter.com/chuxmyk"
+        Icon={FaTwitter}
+        label="Twitter"
+      />
+      <SocialLink
+        url="https://instagram.com/chuxmyk"
+        Icon={FaInstagram}
+        label="Instagram"
+      />
     </div>
   );
 }
 
-interface ISocialLink {
+interface SocialLinkProps {
   url: string;
   Icon: any;
+  label: string;
 }
 
-function SocialLink({ Icon, url }: ISocialLink) {
-  const socialLinkClasses = "h-8 w-8 hover:animate-bounce transition-all text-slate-900 dark:text-slate-50";
+function SocialLink({ Icon, url, label }: SocialLinkProps) {
+  const socialLinkClasses =
+    "h-8 w-8 hover:animate-bounce transition-all text-slate-900 dark:text-slate-50";
   return (
     <>
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" aria-label={label}>
         <Icon className={socialLinkClasses} />
       </a>
     </>

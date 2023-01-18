@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { FaHamburger, FaMoon, FaSun, FaWindowClose } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -95,7 +95,11 @@ function Menu({ menuItems }: MenuProps) {
           );
         })}
 
-        <button className="flex w-full justify-center pt-2" onClick={toggleTheme}>
+        <button
+          className="flex w-full justify-center pt-2"
+          onClick={toggleTheme}
+          aria-label="Dark mode toggle"
+        >
           <div className={`block md:hidden p-2 ${commonLinkClasses}`}>
             <FaMoon className="h-4 w-4 dark:hidden" />
             <FaSun className="h-4 w-4 hidden dark:block" />
@@ -136,6 +140,7 @@ function Menu({ menuItems }: MenuProps) {
       <button
         className={`hidden md:block p-2 ${commonLinkClasses}`}
         onClick={toggleTheme}
+        aria-label="Dark mode toggle"
       >
         <FaMoon className="h-4 w-4 dark:hidden" />
         <FaSun className="h-4 w-4 hidden dark:block" />
@@ -154,37 +159,41 @@ interface LinkProps {
 
 function ExternalLink({ href, label }: LinkProps) {
   const externalLink = (
-    <a href={href} target="_blank">
-      <CommonListItem label={label} />
-    </a>
+    <CommonListItem>
+      <a href={href} target="_blank">
+        {label}
+      </a>
+    </CommonListItem>
   );
   return externalLink;
 }
 
 function HashLinkComponent({ href, label }: LinkProps) {
   const hashLink = (
-    <HashLink to={href} smooth>
-      <CommonListItem label={label} />
-    </HashLink>
+    <CommonListItem>
+      <HashLink to={href} smooth>
+        {label}
+      </HashLink>
+    </CommonListItem>
   );
   return hashLink;
 }
 
 function RegularLink({ href, label }: LinkProps) {
   const regularLink = (
-    <Link to={href}>
-      <CommonListItem label={label} />
-    </Link>
+    <CommonListItem>
+      <Link to={href}>{label}</Link>
+    </CommonListItem>
   );
   return regularLink;
 }
 
-function CommonListItem({ label }: { label: string }) {
+function CommonListItem({ children }: { children: React.ReactElement }) {
   return (
     <li
-      className={`py-1 px-2 text-center w-full text-lg font-medium ${commonLinkClasses}`}
+      className={`py-1 px-2 text-center w-fit text-lg font-medium ${commonLinkClasses}`}
     >
-      {label}
+      {children}
     </li>
   );
 }
