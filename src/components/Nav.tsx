@@ -75,7 +75,7 @@ function Menu({ menuItems }: MenuProps) {
   const { toggleTheme } = useContext(ThemeContext);
   return (
     <div className="flex items-center gap-4">
-      <ul className="bg-slate-100 dark:bg-gray-900 rounded-md w-64 p-8 md:hidden">
+      <ul className="flex flex-col items-center justify-center bg-slate-100 dark:bg-gray-900 rounded-md w-64 p-8 md:hidden">
         {menuItems.map((menuItem) => {
           const key = JSON.stringify(menuItem);
           if (menuItem.external) {
