@@ -3,7 +3,6 @@ import { MdSend } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
@@ -133,7 +132,6 @@ export function ContactMeForm() {
           className="w-full flex flex-col gap-4 py-4"
         >
           <ThemeProvider theme={formTheme}>
-            <CssBaseline />
             <TextField
               label="Name"
               variant="outlined"
