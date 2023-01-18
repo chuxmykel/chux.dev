@@ -27,8 +27,18 @@ export function Nav() {
         <div className="flex justify-between items-center">
           <Logo />
           <button onClick={toggleMenu}>
-            {!showMenu && <FaHamburger className={hamburgerClasses} />}
-            {showMenu && <FaWindowClose className={hamburgerClasses} />}
+            {!showMenu && (
+              <FaHamburger
+                className={hamburgerClasses}
+                aria-label="Open hamburger menu"
+              />
+            )}
+            {showMenu && (
+              <FaWindowClose
+                className={hamburgerClasses}
+                aria-label="Close menu"
+              />
+            )}
           </button>
         </div>
         {showMenu && (
