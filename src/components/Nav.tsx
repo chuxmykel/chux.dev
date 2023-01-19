@@ -1,5 +1,11 @@
 import React, { useState, useContext } from "react";
-import { FaHamburger, FaMoon, FaSun, FaWindowClose } from "react-icons/fa";
+import {
+  FaExternalLinkAlt,
+  FaHamburger,
+  FaMoon,
+  FaSun,
+  FaWindowClose,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -11,7 +17,7 @@ export function Nav() {
     { label: "About Me", href: "/about" },
     {
       label: "Résumé",
-      href: "https://drive.google.com/file/d/1XKgl7lm_iqHbSEKSIWTxNMg3WHjnMnAB/view?usp=sharing",
+      href: "https://resume.io/r/8lllV55Xh",
       external: true,
     },
     { label: "Contact Me", href: "/#contact-me", isHashLink: true },
@@ -170,8 +176,9 @@ interface LinkProps {
 function ExternalLink({ href, label }: LinkProps) {
   const externalLink = (
     <CommonListItem>
-      <a href={href} target="_blank">
-        {label}
+      <a href={href} target="_blank" className="flex items-center gap-1">
+        <span>{label}</span>
+        <FaExternalLinkAlt className="h-3 w-3" />
       </a>
     </CommonListItem>
   );
