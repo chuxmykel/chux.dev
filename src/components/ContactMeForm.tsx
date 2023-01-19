@@ -120,11 +120,11 @@ export function ContactMeForm() {
   return (
     <div className="flex flex-col items-center w-full" id="contact-me">
       <h2 className="font-extrabold text-3xl text-slate-700 dark:text-slate-200">
-        Contact Me!
+        Get in touch.
       </h2>
       <p className="py-4 font-medium italic text-slate-900 dark:text-slate-50">
         Do you have any questions❓, business proposal📝 or just want to say
-        hi👋🏿, please drop me a message📩.
+        hi👋🏿, please drop me a message✉️.
       </p>
       <div className="mb-10 w-full">
         <form
