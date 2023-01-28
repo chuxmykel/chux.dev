@@ -9,7 +9,7 @@ const AboutPage = () => {
     <Layout>
       <div className="font-titillium-web">
         <div className="flex justify-center h-full w-full pt-16">
-          <article className="px-4 prose dark:prose-invert prose-xl xl:prose-2xl prose-slate prose-img:rounded-sm prose-h1:underline prose-headings:underline-offset-8 prose-a:text-blue-600 hover:prose-a:text-blue-400 prose-a:dark:text-blue-400 dark:hover:prose-a:text-blue-300 prose-a:underline prose-a:underline-offset-8 prose-code:pro">
+          <article className="px-4 prose dark:prose-invert prose-xl xl:prose-2xl prose-slate prose-img:rounded-sm prose-h1:underline prose-headings:underline-offset-8 prose-a:text-blue-600 hover:prose-a:text-blue-400 prose-a:dark:text-blue-400 dark:hover:prose-a:text-blue-300 prose-a:underline prose-a:underline-offset-8">
             <h1>About Me</h1>
             <p>
               I am a highly skilled full-stack software engineer with over 4
