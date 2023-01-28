@@ -13,7 +13,7 @@ import { Logo } from "./logo";
 
 export function Nav() {
   const menuItems = [
-    { label: "Blog", href: "/blog" },
+    // { label: "Blog", href: "/blog" },
     { label: "About Me", href: "/about" },
     {
       label: "Résumé",
