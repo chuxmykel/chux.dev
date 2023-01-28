@@ -14,7 +14,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gh-pages -d dist --branch main --repo \"git@github.com:chuxmykel/chuxmykel.github.io.git\""
+    "deploy": "gh-pages -d public --branch main --repo \"git@github.com:chuxmykel/chuxmykel.github.io.git\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
