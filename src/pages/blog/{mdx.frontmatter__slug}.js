@@ -18,7 +18,7 @@ const BlogPost = ({ data, children }) => {
       <div className="flex justify-center font-titillium-web w-full min-h-screen">
         <div className="min-h-full w-full md:flex justify-center mt-10">
           <article
-            className={`prose dark:prose-invert prose-lg xl:prose-xl prose-slate prose-img:rounded-sm prose-h1:underline prose-headings:underline-offset-8 prose-a:text-blue-600 hover:prose-a:text-blue-400 prose-a:dark:text-blue-400 dark:hover:prose-a:text-blue-300 prose-a:underline prose-a:underline-offset-8 prose-code:pro`}
+            className={`prose dark:prose-invert prose-lg xl:prose-xl prose-slate prose-img:rounded-sm prose-h1:underline prose-headings:underline-offset-8 prose-a:text-blue-600 hover:prose-a:text-blue-400 prose-a:dark:text-blue-400 dark:hover:prose-a:text-blue-300 prose-a:underline prose-a:underline-offset-8 prose-pre:font-source-code-pro`}
           >
             <div className="mb-10">
               <h1 className="text-4xl md:text-5xl font-extrabold">
@@ -39,6 +39,7 @@ const BlogPost = ({ data, children }) => {
                 <a
                   href={data.mdx.frontmatter.hero_image_credit_link}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {data.mdx.frontmatter.hero_image_credit_text}
                 </a>
