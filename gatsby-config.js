@@ -12,6 +12,7 @@ module.exports = {
     author: "Ngwobia, Chukwudi Mike",
   },
   plugins: [
+    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
