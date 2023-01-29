@@ -5,7 +5,7 @@ description: "Mic check. Testing 1, 2, 3. "
 date: 2023-01-30 00:16
 author: Ngwobia, Chukwudi M.
 slug: netlify-cms-test
-hero_image: https://picsum.photos/4032/3024
+hero_image: construction.png
 hero_image_alt: Lorem Picsum Random Image
 hero_image_credit_text: Lorem Picsum
 hero_image_credit_link: https://picsum/photos
