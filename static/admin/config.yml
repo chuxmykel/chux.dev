@@ -3,6 +3,7 @@ backend:
   branch: dev # Branch to update (optional; defaults to master)
 
 # local_backend: true
+media_folder: static/img
 
 publish_mode: editorial_workflow
 
