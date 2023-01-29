@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: dev # Branch to update (optional; defaults to master)
+
+# local_backend: true
+media_folder: static/img
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: 'posts'
+    label: 'Posts'
+    label_singular: 'Post'
+    description: ''
+    folder: 'src/blog'
+    create: true
+    slug: 'index'
+    path: '{{title}}/index'
+    editor:
+      preview: true
+    fields: # The fields each document in this collection have
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'YYYY-MM-DD',
+          time_format: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Hero Image', name: 'hero_image', widget: 'image', required: true,  }
+      - { label: 'Hero Image Alt', name: 'hero_image_alt', widget: 'string' }
+      - { label: 'Hero Image Credit Text', name: 'hero_image_credit_text', widget: 'string' }
+      - { label: 'Hero Image Credit Link', name: 'hero_image_credit_link', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
