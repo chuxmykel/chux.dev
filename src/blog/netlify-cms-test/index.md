@@ -6,9 +6,9 @@ date: 2023-01-30 00:16
 author: Ngwobia, Chukwudi M.
 slug: netlify-cms-test
 hero_image: construction.png
-hero_image_alt: Lorem Picsum Random Image
-hero_image_credit_text: Lorem Picsum
-hero_image_credit_link: https://picsum/photos
+hero_image_alt: Construction sign.
+hero_image_credit_text: Google
+hero_image_credit_link: https://google.com
 ---
 # H﻿allo 👋🏿.
 
