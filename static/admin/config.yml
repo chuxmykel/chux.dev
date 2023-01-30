@@ -3,7 +3,8 @@ backend:
   branch: dev # Branch to update (optional; defaults to master)
 
 # local_backend: true
-media_folder: static/img
+media_folder: static/images/uploads
+public_folder: /images/uploads
 
 publish_mode: editorial_workflow
 
@@ -31,6 +32,7 @@ collections:
           format: 'YYYY-MM-DD HH:mm',
         }
       - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Hero Image', name: 'hero_image', widget: 'image', required: true,  }
       - { label: 'Hero Image Alt', name: 'hero_image_alt', widget: 'string' }
       - { label: 'Hero Image Credit Text', name: 'hero_image_credit_text', widget: 'string' }
