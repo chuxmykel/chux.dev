@@ -6,7 +6,7 @@ module.exports = {
     title: `Chukwudi Ngwobia | Fullstack software developer`,
     description: "Personal website/blog for Chukwudi Ngwobia.",
     image: "src/images/icon.png",
-    siteUrl: `https://chux.dev`,
+    siteUrl: `https://www.chux.dev`,
     keywords:
       "HTML,CSS,JavaScript,React,Engineering,Software,Web development,Tech Blog,Portfolio website",
     author: "Ngwobia, Chukwudi Mike",
@@ -34,7 +34,7 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [`gatsby-remark-images`]
+        gatsbyRemarkPlugins: [`gatsby-remark-images`],
       },
     },
     "gatsby-plugin-postcss",
@@ -68,5 +68,6 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 };
