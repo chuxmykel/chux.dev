@@ -2,7 +2,7 @@
   "name": "chux.dev",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://chux.dev/",
+  "homepage": "https://www.chux.dev/",
   "description": "Gateway to amazing.",
   "author": "Chukwudi M. Ngwobia <ngwobiachukwudi@gmail.com>",
   "bugs": {
@@ -29,6 +29,7 @@
     "gatsby-plugin-mdx": "^5.4.0",
     "gatsby-plugin-netlify-cms": "^7.5.0",
     "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.5.0",
     "gatsby-remark-images": "^7.5.0",
     "gatsby-source-filesystem": "^5.4.0",
     "gatsby-transformer-remark": "^6.5.0",
