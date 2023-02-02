@@ -94,7 +94,7 @@ Notice we added *id="address-input"* to the input field and the equivalent to th
 
 ## Backend Development
 
-Back-end development focuses on the server-side of web development. It typically involves using a server-side languages such as PHP, Python, Ruby etc. to manage data and provide an interface for the front-end to interact with. These languages are used to create dynamic websites that can interact with databases and retrieve or store data.
+Back-end development focuses on the server-side of web development. It typically involves using server-side languages such as PHP, Python, Ruby etc. to manage data and provide an interface for the front-end to interact with. These languages are used to create dynamic websites that can interact with databases and retrieve or store data.
 
 Web development also involves optimising websites for performance and SEO, as well as testing and debugging code. Additionally, web developers often use version control systems such as [Git](https://git-scm.com) to manage and track changes to the codebase.
 
