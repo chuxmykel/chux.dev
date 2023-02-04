@@ -12,15 +12,16 @@ hero_image_alt: Macbook pro on brown wooden table.
 hero_image_credit_text: Maxwell Nelson
 hero_image_credit_link: https://unsplash.com/photos/taiuG8CPKAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
-
 Web development is the process of building, designing, and maintaining websites for the internet (World Wide Web) or an intranet (Private Network). It encompasses a wide range of technologies and skills, including HTML, CSS, and JavaScript for front-end development, as well as server-side languages such as PHP, Python, Node JS, Java, Ruby etc. for back-end development.
 
 Web development can be broadly divided into two categories: front-end development and back-end development.
 
 ## Front-end development.
-Front-end development focuses on the client-side of web development, which is what the user sees and interacts with when visiting a website. This includes the layout, design, and functionality of the website. There are many technologies used to build web applications on the front end but fundamentally, It typically involves using HTML, CSS, and JavaScript. Other tools used to build web applications _usually_ end up generating HTML, CSS and JavaScript to run on the browser. Let's take a closer look at these terms.
+
+Front-end development focuses on the client-side of web development, which is what the user sees and interacts with when visiting a website. This includes the layout, design, and functionality of the website. There are many technologies used to build web applications on the front end but fundamentally, It typically involves using HTML, CSS, and JavaScript. Other tools used to build web applications *usually* end up generating HTML, CSS and JavaScript to run on the browser. Let's take a closer look at these terms (HTML, CSS & JavaScript).
 
 ### HTML (Hypertext Markup Language).
+
 HTML is used to create the structure of a webpage. It provides building blocks "sort-of" for our websites. For example, if we want a page with an input field and a button to submit the content of the input field, HTML gives us *tags* or *elements* which we can use by declaring these elements in a HTML document.
 
 ```html
@@ -31,11 +32,12 @@ HTML is used to create the structure of a webpage. It provides building blocks "
 	
 ```
 
-> To try this out, create a file named _index.html_ and paste the code above into the file. Save the file, copy the path (where it's saved on your computer) and paste it into any browser address bar and see your website in action.😉
+> To try this out, create a file named *index.html* and paste the code above into the file. Save the file, copy the path (where it's saved on your computer) and paste it into any browser address bar and see your website in action.😉
 
 The elements in this case are input and button. There are [a lot of elements](https://www.w3schools.com/tags/default.asp) and I do not recommend trying to memorise them. There's really no reason why you should. All the information about them are freely available on the internet and also with time and usage, even without trying, you notice you're able to recall some of them from memory.
 
 ### CSS (Cascading Style Sheets).
+
 CSS is used to control the layout and design of a webpage. Think of it this way, if HTML provides the building blocks, CSS provides the paint and furniture to make the building look beautiful 😅.
 CSS can be used to apply styles to HTML elements. This can be done using [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 To style our simple HTML form declared above, we can add [classes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) to the *input* and *button* elements declared earlier in our HTML file.
@@ -59,12 +61,14 @@ To style our simple HTML form declared above, we can add [classes](https://devel
 		}
 	</style>
 ```
-> You can also try this by replacing the contents of the _index.html_ file you created in the _HTML Section_ and remember to reload your browser (or follow the instructions in that section to open the file in your browser).
+
+> You can also try this by replacing the contents of the *index.html* file you created in the *HTML Section* and remember to reload your browser (or follow the instructions in that section to open the file in your browser).
 
 Notice how our simple form looks a lot better now because of the styles we added.
 
 ### JavaScript.
-JavaScript is used to add interactivity and dynamic functionality to a webpage. In our case, let's assume I want to submit my address to my bank when I click the button, we need JavaScript to read the value from the input field, format the data in a way the bank expects and then send the data over to the bank. We also need JavaScript to process the response from the bank. There is a lot we can do with JavaScript; we can add new HTML elements to the screen, remove elements currently on the screen, fetch data from a remote server and render it on our screen, check that the user trying to access our website is logged in before granting access etc. The list is endless to be honest, if you can think it, you can do it with JavaScript. 😅 ~an exaggeration but you get my point~.
+
+JavaScript is used to add interactivity and dynamic functionality to a webpage. In our case, let's assume I want to submit my address to my bank when I click the button, we need JavaScript to read the value from the input field, format the data in a way the bank expects and then send the data over to the bank. We also need JavaScript to process the response from the bank. There is a lot we can do with JavaScript; we can add new HTML elements to the screen, remove elements currently on the screen, fetch data from a remote server and render it on our screen, check that the user trying to access our website is logged in before granting access etc. The list is endless to be honest, if you can think it, you can do it with JavaScript. 😅 \~an exaggeration but you get my point\~.
 Below is a sample script to submit our form to a fictional bank.
 
 ```html
@@ -87,10 +91,10 @@ Below is a sample script to submit our form to a fictional bank.
 		submitButton.addEventListener("click", handleSubmit);
 	</script>
 ```
-> ⚠️ This code will not send information to any bank, we just log it to the console so feel free to run it in the _index.html_ file.
 
-Notice we added *id="address-input"* to the input field and the equivalent to the submit button. This is because we want to get those elements by their *id* using JavaScript. We will discuss these in detail later so no need to worry if it doesn't make much sense right now. _The key take away is, we can add interactivity to our webpage and do really cool stuff with JavaScript._
+> ⚠️ This code will not send information to any bank, we just log it to the console so feel free to run it in the *index.html* file.
 
+Notice we added *id="address-input"* to the input field and the equivalent to the submit button. This is because we want to get those elements by their *id* using JavaScript. We will discuss these in detail later so no need to worry if it doesn't make much sense right now. *The key take away is, we can add interactivity to our webpage and do really cool stuff with JavaScript.*
 
 ## Backend Development
 
