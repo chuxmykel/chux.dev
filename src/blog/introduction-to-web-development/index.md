@@ -4,7 +4,7 @@ draft: true
 description: "Unlock the Power of the Internet with Web Development: From
   Designing Websites to Managing Data, Learn How to Build and Maintain Dynamic
   and Engaging Online Experiences."
-date: 2023-01-30 19:28
+date: 2023-02-04 15:35
 author: Ngwobia, Chukwudi M.
 slug: introduction-to-web-development
 hero_image: code_pc.jpg
@@ -13,9 +13,9 @@ hero_image_credit_text: Maxwell Nelson
 hero_image_credit_link: https://unsplash.com/photos/taiuG8CPKAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
-Web development is the process of building, designing, and maintaining websites for the internet (World Wide Web) or an intranet (Private Network). It encompasses a wide range of technologies and skills, including HTML, CSS, and JavaScript for front-end development, as well as server-side languages such as PHP, Python, Node JS, Java, Ruby etc. for back-end development.
+Web development is the process of building, designing, and maintaining websites for the internet (World Wide Web) or an intranet (Private Network). It can be broadly divided into two categories: front-end development and back-end development and encompasses a wide range of technologies and skills, including HTML, CSS, and JavaScript for front-end development, as well as server-side languages such as PHP, Python, Node JS, Java, Ruby etc. for back-end development.
 
-Web development can be broadly divided into two categories: front-end development and back-end development.
+
 
 ## Front-end development.
 
@@ -37,7 +37,7 @@ HTML is used to create the structure of a webpage. It provides building blocks "
 
 The elements in this case are 'input' and 'button'. There are [lots of elements](https://www.w3schools.com/tags/default.asp) and I do not recommend trying to memorise them all. There's really no reason why you should. All the information about them are freely available on the internet and also with time and usage, even without trying, you notice you're able to recall some of them from memory.
 
-H﻿ere's what you should see on the browser if you followed the instructions above.
+Here's what you should see on the browser if you followed the instructions above.
 
 ![The input and button element as declared in the code](https://i.ibb.co/tp0WVnC/Screenshot-2023-02-04-at-14-40-35.png)
 
