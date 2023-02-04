@@ -12,7 +12,6 @@ hero_image_alt: Macbook pro on brown wooden table.
 hero_image_credit_text: Maxwell Nelson
 hero_image_credit_link: https://unsplash.com/photos/taiuG8CPKAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
-
 Web development is the process of building, designing, and maintaining websites for the internet (World Wide Web) or an intranet (Private Network). It encompasses a wide range of technologies and skills, including HTML, CSS, and JavaScript for front-end development, as well as server-side languages such as PHP, Python, Node JS, Java, Ruby etc. for back-end development.
 
 Web development can be broadly divided into two categories: front-end development and back-end development.
@@ -69,7 +68,9 @@ To style our simple HTML form declared above, we can add [classes](https://devel
 
 > You can also try this by replacing the contents of the *index.html* file you created in the *HTML Section* and remember to reload your browser (or follow the instructions in that section to open the file in your browser).
 
-Notice how our simple form looks a lot better now because of the styles we added.
+![The same user interface (UI) but styled](https://i.ibb.co/ThCqMyK/Screenshot-2023-02-04-at-15-05-39.png)
+
+Notice how our simple form looks a ~~lot better~~ 🚮 different now because of the styles we added.
 
 ### JavaScript.
 
