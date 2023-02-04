@@ -12,6 +12,7 @@ hero_image_alt: Macbook pro on brown wooden table.
 hero_image_credit_text: Maxwell Nelson
 hero_image_credit_link: https://unsplash.com/photos/taiuG8CPKAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
+
 Web development is the process of building, designing, and maintaining websites for the internet (World Wide Web) or an intranet (Private Network). It encompasses a wide range of technologies and skills, including HTML, CSS, and JavaScript for front-end development, as well as server-side languages such as PHP, Python, Node JS, Java, Ruby etc. for back-end development.
 
 Web development can be broadly divided into two categories: front-end development and back-end development.
