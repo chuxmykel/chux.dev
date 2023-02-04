@@ -32,9 +32,9 @@ HTML is used to create the structure of a webpage. It provides building blocks "
 	
 ```
 
-> To try this out, create a file named *index.html* and paste the code above into the file. Save the file, copy the path (where it's saved on your computer) and paste it into any browser address bar and see your website in action.😉
+> To try this out, create a file named *index.html* and paste the code above into the file. Save the file, copy the path (where it's saved on your computer) and paste it into any browser address bar and see your website in action.
 
-The elements in this case are input and button. There are [a lot of elements](https://www.w3schools.com/tags/default.asp) and I do not recommend trying to memorise them. There's really no reason why you should. All the information about them are freely available on the internet and also with time and usage, even without trying, you notice you're able to recall some of them from memory.
+The elements in this case are 'input' and 'button'. There are [lots of elements](https://www.w3schools.com/tags/default.asp) and I do not recommend trying to memorise them all. There's really no reason why you should. All the information about them are freely available on the internet and also with time and usage, even without trying, you notice you're able to recall some of them from memory.
 
 ### CSS (Cascading Style Sheets).
 
