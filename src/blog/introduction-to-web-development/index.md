@@ -75,6 +75,8 @@ Notice how our simple form looks a ~~lot better~~ 🚮 different now because of 
 ### JavaScript.
 
 JavaScript is used to add interactivity and dynamic functionality to a webpage. In our case, let's assume I want to submit my address to my bank when I click the button, we need JavaScript to read the value from the input field, format the data in a way the bank expects and then send the data over to the bank. We also need JavaScript to process the response from the bank. There is a lot we can do with JavaScript; we can add new HTML elements to the screen, remove elements currently on the screen, fetch data from a remote server and render it on our screen, check that the user trying to access our website is logged in before granting access etc. The list is endless to be honest, if you can think it, you can do it with JavaScript. 😅 \~an exaggeration but you get my point\~.
+
+
 Below is a sample script to submit our form to a fictional bank.
 
 ```html
@@ -102,12 +104,18 @@ Below is a sample script to submit our form to a fictional bank.
 
 Notice we added *id="address-input"* to the input field and the equivalent to the submit button. This is because we want to get those elements by their *id* using JavaScript. We will discuss these in detail later so no need to worry if it doesn't make much sense right now. *The key take away is, we can add interactivity to our webpage and do really cool stuff with JavaScript.*
 
+
+
 ## Backend Development
 
 Back-end development focuses on the server-side of web development. It typically involves using server-side languages such as PHP, Python, Ruby etc. to manage data and provide an interface for the front-end to interact with. These languages are used to create dynamic websites that can interact with databases and retrieve or store data.
 
 Web development also involves optimising websites for performance and SEO, as well as testing and debugging code. Additionally, web developers often use version control systems such as [Git](https://git-scm.com) to manage and track changes to the codebase.
 
-Overall, web development is a field that is constantly evolving and growing, with new technologies and frameworks emerging all the time. It is an exciting and challenging field that offers many opportunities for creative problem-solving and collaboration.
+Overall, web development is a field that is constantly evolving and growing, with new technologies and frameworks emerging all the time. It is an exciting but challenging field that offers many opportunities for creative problem-solving and collaboration.
 
-And there you have it folks! A quick overview of what web development is all about. In this series, I'll be your guide as we explore the exciting world of building and maintaining websites. I'll take you from a complete newbie to a skilled web developer, breaking down the concepts discussed in this post and explaining them in detail. Whether it's setting up your local environment or optimising for performance, I've got you covered. So buckle up and get ready to join me on this thrilling journey! Next up, I'll be showing you how to set up your local development environment, so stay tuned and let's get started on this amazing adventure of becoming a web developer.
+And there you have it folks! A quick overview of what web development is all about.
+
+In this series, I'll be your guide as we explore the exciting world of building and maintaining websites. I'll take you from a complete newbie to a skilled full-stack web developer, breaking down the concepts discussed in this post and explaining them in detail. Whether it's setting up your local development environment or optimising for performance, I've got you covered. So buckle up and get ready to join me on this thrilling journey!
+
+Next up, I'll be showing you how to set up your local development environment, so stay tuned and let's get started on this amazing adventure of becoming a web developer.
