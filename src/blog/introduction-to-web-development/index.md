@@ -29,7 +29,7 @@ HTML is used to create the structure of a webpage. It provides building blocks "
 	<!-- index.html -->
 	
 	<input type="text" name="address" />
-	<button type="submit">Submit Address</button>
+	<button>Submit Address</button>
 	
 ```
 
@@ -43,14 +43,15 @@ Here's what you should see on the browser if you followed the instructions above
 
 ### CSS (Cascading Style Sheets).
 
-CSS is used to control the layout and design of a webpage. Think of it this way, if HTML provides the building blocks, CSS provides the paint and furniture to make the building look beautiful 😅.
-CSS can be used to apply styles to HTML elements. This can be done using [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+Think of it this way, if HTML provides the building blocks, CSS provides the paint and furniture to make the building look beautiful 😅. CSS is used to modify the layout and design of a webpage by applying styles to HTML elements. This can be done using [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 To style our simple HTML form declared above, we can add [classes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) to the *input* and *button* elements declared earlier in our HTML file.
 
 ```html
 	<!-- index.html -->
 	<input type="text" name="address" class="address-input" />
-	<button type="submit" class="submit-button">Submit Address</button>
+	<button class="submit-button">Submit Address</button>
+
+	<!-- To apply CSS styles in an HTML file, you have to declare them using the <style></style> tag -->
 	<style>
 		.address-input {
 			/* Add styles for the address input here. */
@@ -60,22 +61,30 @@ To style our simple HTML form declared above, we can add [classes](https://devel
 		
 		.submit-button {
 			/* Add styles for the submit buton here. */
+			all: unset;
 			height: 40px;
 			width: 150px;
 			font-size: large;
+			background-color: blue;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			border-radius: 10px;
 		}
 	</style>
 ```
 
 > You can also try this by replacing the contents of the *index.html* file you created in the *HTML Section* and remember to reload your browser (or follow the instructions in that section to open the file in your browser).
 
-![The same user interface (UI) but styled](https://i.ibb.co/ThCqMyK/Screenshot-2023-02-04-at-15-05-39.png)
+![The same user interface (UI) but styled](https://i.ibb.co/5G4NmG2/Screenshot-2023-02-04-at-15-56-32.png)
 
-Notice how our simple form looks a ~~lot better~~ 🚮 different now because of the styles we added.
+Notice how our simple form looks different now because of the styles we added.
 
 ### JavaScript.
 
-JavaScript is used to add interactivity and dynamic functionality to a webpage. In our case, let's assume I want to submit my address to my bank when I click the button, we need JavaScript to read the value from the input field, format the data in a way the bank expects and then send the data over to the bank. We also need JavaScript to process the response from the bank. There is a lot we can do with JavaScript; we can add new HTML elements to the screen, remove elements currently on the screen, fetch data from a remote server and render it on our screen, check that the user trying to access our website is logged in before granting access etc. The list is endless to be honest, if you can think it, you can do it with JavaScript. 😅 \~an exaggeration but you get my point\~.
+JavaScript is used to add interactivity and dynamic functionality to a webpage. In our case, let's assume I want to submit my address to my bank when I click the button. We can use JavaScript to read the value(address) from the input field, format it to be the way the bank expects and then send it over to the bank. We also need JavaScript to process the response from the bank. There is a lot we can do with JavaScript; we can add new HTML elements to the screen, remove elements currently on the screen, fetch data from a remote server, render the data on our screen, check that the user trying to access our website is logged in before granting access, the list is endless to be honest. If you can think it, you can do it with JavaScript. 😅 _an exaggeration but you get my point_.
 
 
 Below is a sample script to submit our form to a fictional bank.
@@ -83,17 +92,19 @@ Below is a sample script to submit our form to a fictional bank.
 ```html
 	<!-- index.html -->
 	<input type="text" name="address" class="address-input" id="address-input" />
-	<button type="submit" class="submit-button" id="submit-button">Submit Address</button>
+	<button class="submit-button" id="submit-button">Submit Address</button>
 	<style>
 		/* styles remain unchanged. */
 	</style>
+
+	<!-- Scripts are declared using the <script></script> tag -->
 	<script>
 
 		let submitButton = document.getElementById("submit-button");
 		function handleSubmit() {
 			let inputValue = document.getElementById("address-input").value;
 			// now that we have the input value, we can send it to our bank
-			// ... {code to send inputValue to the bank (we actually just print the value out to the console) 😉}
+			// ... {code to send inputValue to the bank (⚠️ DO NOT BE AFRAID! we actually just print the value out to the console😉) }
 			console.log(inputValue);
 		}
 		// Listen for clicks on the submit button and submit the adress when we get a click.
@@ -101,15 +112,15 @@ Below is a sample script to submit our form to a fictional bank.
 	</script>
 ```
 
-> ⚠️ This code will not send information to any bank, we just log it to the console so feel free to run it in the *index.html* file.
+> ⚠️ This code will not send information to any bank, we just log it to the console so feel free to run it in the *index.html* file just like before.
 
-Notice we added *id="address-input"* to the input field and the equivalent to the submit button. This is because we want to get those elements by their *id* using JavaScript. We will discuss these in detail later so no need to worry if it doesn't make much sense right now. *The key take away is, we can add interactivity to our webpage and do really cool stuff with JavaScript.*
+Notice we added *id="address-input"* to the input field and the equivalent to the submit button. This is because we want to get those elements by their *id* using JavaScript. We will discuss these in detail later so no need to worry if it doesn't make much sense right now. **The key take away is, we can add interactivity to our webpage and do really cool stuff with JavaScript.**
 
 
 
 ## Backend Development
 
-Back-end development focuses on the server-side of web development. It typically involves using server-side languages such as PHP, Python, Ruby etc. to manage data and provide an interface for the front-end to interact with. These languages are used to create dynamic websites that can interact with databases and retrieve or store data.
+Back-end development focuses on the server-side of web development. It typically involves using [server-side](https://en.wikipedia.org/wiki/Server-side) languages such as PHP, Python, Ruby etc. to manage data and provide an interface for the front-end to interact with. These languages are used to create dynamic websites that can interact with databases and retrieve or store data.
 
 Web development also involves optimising websites for performance and SEO, as well as testing and debugging code. Additionally, web developers often use version control systems such as [Git](https://git-scm.com) to manage and track changes to the codebase.
 
