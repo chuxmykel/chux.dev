@@ -36,6 +36,10 @@ HTML is used to create the structure of a webpage. It provides building blocks "
 
 The elements in this case are 'input' and 'button'. There are [lots of elements](https://www.w3schools.com/tags/default.asp) and I do not recommend trying to memorise them all. There's really no reason why you should. All the information about them are freely available on the internet and also with time and usage, even without trying, you notice you're able to recall some of them from memory.
 
+H﻿ere's what you should see on the browser if you followed the instructions above.
+
+![The input and button element as declared in the code](https://ibb.co/Swk9FHv)
+
 ### CSS (Cascading Style Sheets).
 
 CSS is used to control the layout and design of a webpage. Think of it this way, if HTML provides the building blocks, CSS provides the paint and furniture to make the building look beautiful 😅.
