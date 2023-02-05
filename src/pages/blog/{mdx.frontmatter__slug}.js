@@ -21,11 +21,13 @@ const BlogPost = ({ data, children }) => {
     hero_image_credit_link,
     hero_image_credit_text,
     // author,
+    description,
     tags,
   } = data.mdx.frontmatter;
   const components = {
     pre: (props) => <div {...props} className="text-base md:text-lg"></div>,
     code: CodeBlock,
+    a: (props) => <a {...props} target="_blank" rel="noreferrer">{props.children}</a>
   };
   const image = getImage(hero_image);
   return (
@@ -40,8 +42,10 @@ const BlogPost = ({ data, children }) => {
 
                 <h1 className="text-center">{title}</h1>
 
-                <div className="flex flex-col items-center -mt-10 mb-10">
-                  <p className="italic text-base">
+                <em className="text-lg text-center">{description}</em>
+
+                <div className="flex flex-col items-center mb-10">
+                  <p className="text-base font-semibold">
                     Published: {date}
                   </p>
                   <span className="flex items-center -mt-8 text-sm gap-2">
