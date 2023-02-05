@@ -13,14 +13,14 @@ import { Logo } from "./logo";
 
 export function Nav() {
   const menuItems = [
-    // { label: "Blog", href: "/blog" },
-    { label: "About Me", href: "/about" },
-    {
-      label: "Résumé",
-      href: "https://resume.io/r/8lllV55Xh",
-      external: true,
-    },
+    { label: "Blog", href: "/blog" },
     { label: "Contact Me", href: "/#contact-me", isHashLink: true },
+    { label: "About", href: "/about" },
+    // {
+    //   label: "Résumé",
+    //   href: "https://resume.io/r/8lllV55Xh",
+    //   external: true,
+    // },
   ];
   const [showMenu, setShowMenu] = useState(false);
   function toggleMenu() {

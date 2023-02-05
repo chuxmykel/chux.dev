@@ -2,12 +2,17 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXProvider } from "@mdx-js/react";
+import { FaClock } from "react-icons/fa";
 
 import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
 import { CodeBlock } from "../../components/code-block";
 
+const readingTime = require("reading-time/lib/reading-time");
+
 const BlogPost = ({ data, children }) => {
+  const { body } = data.mdx;
+  const timeToRead = readingTime(body).text;
   const {
     hero_image,
     title,
@@ -15,7 +20,7 @@ const BlogPost = ({ data, children }) => {
     hero_image_alt,
     hero_image_credit_link,
     hero_image_credit_text,
-    author,
+    // author,
     tags,
   } = data.mdx.frontmatter;
   const components = {
@@ -30,12 +35,25 @@ const BlogPost = ({ data, children }) => {
           <article
             className={`prose dark:prose-invert prose-lg xl:prose-xl prose-slate prose-img:rounded-sm prose-h1:underline prose-headings:underline-offset-8 prose-a:text-blue-600 hover:prose-a:text-blue-400 prose-a:dark:text-blue-400 dark:hover:prose-a:text-blue-300 prose-a:underline prose-a:underline-offset-8 prose-pre:font-source-code-pro`}
           >
-            <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-extrabold">{title}</h1>
-              <p className="text-base italic">
-                Published: {date} by {author}
-              </p>
+            <div className="flex flex-col">
+              <div className="flex flex-col items-center">
+
+                <h1 className="text-center">{title}</h1>
+
+                <div className="flex flex-col items-center -mt-10 mb-10">
+                  <p className="italic text-base">
+                    Published: {date}
+                  </p>
+                  <span className="flex items-center -mt-8 text-sm gap-2">
+                    <FaClock />
+                    <p className="font-bold">{timeToRead}</p>
+                  </span>
+                </div>
+
+              </div>
+
               <GatsbyImage image={image} alt={hero_image_alt} />
+
               <div className="flex justify-center">
                 <p className="text-base italic">
                   Photo Credit:{" "}
@@ -50,9 +68,12 @@ const BlogPost = ({ data, children }) => {
               </div>
             </div>
             <MDXProvider components={components}>{children}</MDXProvider>
-            <div className="mt-20 flex justify-end gap-4">
+            <div className="mt-20 flex justify-start gap-4">
               {tags.map((tag) => (
-                <span className="bg-slate-200 dark:bg-slate-700 px-2 rounded font-thin text-base">
+                <span
+                  key={tag}
+                  className="bg-slate-200 dark:bg-slate-700 px-2 rounded font-thin text-base"
+                >
                   {tag}
                 </span>
               ))}
