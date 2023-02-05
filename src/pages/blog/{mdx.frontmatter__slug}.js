@@ -72,7 +72,7 @@ const BlogPost = ({ data, children }) => {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-slate-200 dark:bg-slate-700 px-2 rounded font-thin text-base"
+                  className="bg-slate-200 dark:bg-slate-700 px-2 py-1 md:py-0 rounded font-thin text-xs md:text-base"
                 >
                   {tag}
                 </span>
