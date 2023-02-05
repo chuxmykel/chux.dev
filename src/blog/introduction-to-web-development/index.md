@@ -11,8 +11,6 @@ tags:
   - HTML
   - CSS
   - JavaScript
-  - Front-end
-  - Back-end
 hero_image: code_pc.jpg
 hero_image_alt: MacBook pro on a brown wooden table.
 hero_image_credit_text: Maxwell Nelson
