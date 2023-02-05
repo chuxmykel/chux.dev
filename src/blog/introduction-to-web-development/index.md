@@ -1,5 +1,5 @@
 ---
-title: Introduction to web Development.
+title: Introduction to Web Development.
 draft: true
 description: "Unlock the Power of the Internet with Web Development: From
   Designing Websites to Managing Data, Learn How to Build and Maintain Dynamic
@@ -22,7 +22,7 @@ Web development can be broadly divided into two categories: front-end developmen
 
 ## Front-end development.
 
-Front-end development focuses on the client-side of web development, which is what the user sees and interacts with when visiting a website. This includes the layout, design, and functionality of the website. There are many technologies used to build web applications on the front end but fundamentally, It typically involves using HTML, CSS, and JavaScript. Other tools used to build web applications *usually* end up generating HTML, CSS and JavaScript to run on the browser. Let's take a closer look at these terms (HTML, CSS & JavaScript).
+Front-end development focuses on the [client-side](https://en.wikipedia.org/wiki/Client-side) of web development, which is what the user sees and interacts with when visiting a website. This includes the layout, design, and functionality of the website. There are many technologies used to build web applications on the front end, but fundamentally, It typically involves using HTML, CSS, and JavaScript. Other tools used to build web applications *usually* end up generating HTML, CSS and JavaScript to run on the browser. Let's take a closer look at these terms (HTML, CSS & JavaScript).
 
 ### HTML (Hypertext Markup Language).
 
@@ -46,10 +46,10 @@ Here's what you should see on the browser if you followed the instructions above
 
 ![The input and button element as declared in the code](https://i.ibb.co/tp0WVnC/Screenshot-2023-02-04-at-14-40-35.png)
 
-### CSS (Cascading Style Sheets).
+### CSS (Cascading Style Sheet).
 
-Think of it this way, if HTML provides the building blocks, CSS provides the paint, furniture and other items needed to make the building look beautiful 😅. CSS is used to modify the layout and design of a webpage by applying styles to HTML elements. This can be done using [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
-To style our simple HTML form declared above, we can add [classes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) to the *input* and *button* elements declared earlier in our HTML file.
+CSS is used to modify the layout and design of a webpage by applying styles to HTML elements. This can be done using [selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+To style our simple HTML form declared above, we can add [classes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) to the *input* and *button* elements declared earlier in our HTML file, and select them to be styled using the classes assigned to them.
 
 ```html
 	<!-- index.html -->
@@ -60,12 +60,14 @@ To style our simple HTML form declared above, we can add [classes](https://devel
 
 	<!-- To apply CSS styles in an HTML file, you have to declare them using the <style></style> tag -->
 	<style>
+		/* Selector for the address input based on the class assigned to it */
 		.address-input {
 			/* Add styles for the address input here. */
 			height: 40px;
 			width: 400px;
 		}
 		
+		/* Selector for the submit button based on the class assigned to it */
 		.submit-button {
 			/* Add styles for the submit buton here. */
 			all: unset;
@@ -90,6 +92,8 @@ This is what our page should look like with the styles applied.
 ![The same user interface (UI) but styled](https://i.ibb.co/5G4NmG2/Screenshot-2023-02-04-at-15-56-32.png)
 
 Notice how our simple form looks different now because of the styles we added.
+
+>Think of it this way; if HTML provides the building blocks, CSS provides the paint, furniture and other items needed to make the resulting building look beautiful 😅. 
 
 ### JavaScript.
 
