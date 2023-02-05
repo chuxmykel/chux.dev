@@ -1,10 +1,10 @@
 ---
 title: Introduction to Web Development.
-draft: true
+draft: false
 description: "Unlock the Power of the Internet with Web Development: From
   Designing Websites to Managing Data, Learn How to Build and Maintain Dynamic
   and Engaging Online Experiences."
-date: 2023-02-05 11:26
+date: 2023-02-05 14:33
 author: Ngwobia, Chukwudi M.
 slug: introduction-to-web-development
 tags:
@@ -14,7 +14,7 @@ tags:
   - Front-end
   - Back-end
 hero_image: code_pc.jpg
-hero_image_alt: Macbook pro on brown wooden table.
+hero_image_alt: MacBook pro on a brown wooden table.
 hero_image_credit_text: Maxwell Nelson
 hero_image_credit_link: https://unsplash.com/photos/taiuG8CPKAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
