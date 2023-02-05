@@ -68,6 +68,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-1390691972588218`,
+      },
+    },
     `gatsby-plugin-sitemap`,
   ],
 };
