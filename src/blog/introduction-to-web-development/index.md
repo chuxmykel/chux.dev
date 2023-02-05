@@ -4,9 +4,15 @@ draft: true
 description: "Unlock the Power of the Internet with Web Development: From
   Designing Websites to Managing Data, Learn How to Build and Maintain Dynamic
   and Engaging Online Experiences."
-date: 2023-02-04 15:35
+date: 2023-02-05 11:26
 author: Ngwobia, Chukwudi M.
 slug: introduction-to-web-development
+tags:
+  - HTML
+  - CSS
+  - JavaScript
+  - Front-end
+  - Back-end
 hero_image: code_pc.jpg
 hero_image_alt: Macbook pro on brown wooden table.
 hero_image_credit_text: Maxwell Nelson
