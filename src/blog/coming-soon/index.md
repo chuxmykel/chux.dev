@@ -4,6 +4,9 @@ description: Posts will be coming soon.
 date: "2023-01-28"
 author: "Ngwobia, Chukwudi M."
 slug: "coming-soon"
+tags:
+  - Test
+  - Blog
 hero_image: "./nature.jpeg"
 hero_image_alt: "A beautiful scene of nature."
 hero_image_credit_text: "max pruvost"

@@ -1,16 +1,19 @@
 ---
 title: Netlify CMS Test
 draft: true
-description: "Mic check. Testing 1, 2, 3. "
+description: "Mic check. Testing 1, 2, 3."
 date: 2023-01-30 00:16
 author: Ngwobia, Chukwudi M.
 slug: netlify-cms-test
+tags:
+  - Test
+  - Blog
 hero_image: construction.png
 hero_image_alt: Construction sign.
 hero_image_credit_text: Google
 hero_image_credit_link: https://google.com
 ---
-# H﻿allo 👋🏿.
+# Hallo 👋🏿.
 
 
 

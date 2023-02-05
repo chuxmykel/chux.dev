@@ -31,10 +31,11 @@ collections:
           time_format: 'HH:mm',
           format: 'YYYY-MM-DD HH:mm',
         }
-      - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Hero Image', name: 'hero_image', widget: 'image', required: true,  }
-      - { label: 'Hero Image Alt', name: 'hero_image_alt', widget: 'string' }
-      - { label: 'Hero Image Credit Text', name: 'hero_image_credit_text', widget: 'string' }
-      - { label: 'Hero Image Credit Link', name: 'hero_image_credit_link', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+      - { label: 'Author', name: 'author', widget: 'string', required: true, }
+      - { label: 'Slug', name: 'slug', widget: 'string', required: true, }
+      - { label: 'Tags', name: 'tags', widget: 'list', required: true, }
+      - { label: 'Hero Image', name: 'hero_image', widget: 'image', required: true, }
+      - { label: 'Hero Image Alt', name: 'hero_image_alt', widget: 'string', required: true, }
+      - { label: 'Hero Image Credit Text', name: 'hero_image_credit_text', widget: 'string', required: true, }
+      - { label: 'Hero Image Credit Link', name: 'hero_image_credit_link', widget: 'string', required: true, }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' , required: true, }
