@@ -21,7 +21,11 @@ const AboutPage = () => {
               best practices to create maintainable, testable, and
               production-ready software artifacts.
             </p>
+<<<<<<< HEAD
             {/* <p>
+=======
+            <p>
+>>>>>>> 5adaf4d (remove adsense from about page (#23))
               My recent work includes the development of the
               <a
                 href="https://app.freemancapital.co"
