@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import AdSense from "react-adsense";
 
 import Layout from "../components/layout";
 import { Seo } from "../components/seo";
@@ -22,19 +21,6 @@ const AboutPage = () => {
               applying industry best practices to create maintainable, testable,
               and production-ready software artifacts.
             </p>
-             <>
-
-              <div className="p-2 border border-slate-800 dark:border-slate-100">
-                <AdSense.Google
-                  client="ca-pub-1390691972588218"
-                  slot="2482011308"
-                  style={{ display: "block", textAlign: "center" }}
-                  layout="in-article"
-                  format="fluid"
-                />
-              </div>
-
-            </>
             <p>
               My recent work includes the development of the
               <a
