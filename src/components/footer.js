@@ -16,7 +16,7 @@ export function Footer() {
               {`${new Date().getFullYear()} Copyright. Ngwobia, C. M.`}
             </span>
           </div>
-          <div className="flex justify-end items-center gap-1 text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300 text-xs">
+          {/* <div className="flex justify-end items-center gap-1 text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300 text-xs">
             <a
               href="https://docs.google.com/document/d/1xiQ_McjCU5--qK6wNuQsJFambfVnM12OgEn9MpJ5fLE/edit?usp=sharing"
               target="_blank"
@@ -26,7 +26,7 @@ export function Footer() {
               Privacy Policy
             </a>
             <FaExternalLinkAlt />
-          </div>
+          </div> */}
         </span>
       </footer>
     </>
