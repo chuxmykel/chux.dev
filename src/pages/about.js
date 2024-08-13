@@ -12,16 +12,16 @@ const AboutPage = () => {
           <article className="px-4 prose dark:prose-invert prose-xl xl:prose-2xl prose-slate prose-img:rounded-sm prose-h1:underline prose-headings:underline-offset-8 prose-a:text-blue-600 hover:prose-a:text-blue-400 prose-a:dark:text-blue-400 dark:hover:prose-a:text-blue-300 prose-a:underline prose-a:underline-offset-8">
             <h1>About Me</h1>
             <p>
-              I am a highly skilled full-stack software engineer with over 4
-              years of professional experience working in fast-paced,
-              cross-cultural, and distributed teams
+              I am a software engineer with over 6 years of professional
+              experience building with fast-paced, cross-cultural, and
+              distributed engineering teams to bring product ideas to life.
             </p>
             <p>
-              My primary objective is to deliver value as quickly as possible by
-              applying industry best practices to create maintainable, testable,
-              and production-ready software artifacts.
+              My objective is to deliver value quickly, by applying industry
+              best practices to create maintainable, testable, and
+              production-ready software artifacts.
             </p>
-            <p>
+            {/* <p>
               My recent work includes the development of the
               <a
                 href="https://app.freemancapital.co"
@@ -52,10 +52,10 @@ const AboutPage = () => {
                 {` Codex Academy, `}
               </a>
               helping them to acquire modern and marketable tech skills.
-            </p>
+            </p> */}
             <p>
-              In my free time, I am an avid music lover and enjoy playing
-              various instruments. I also enjoy skating and swimming.
+              I am an avid music lover and enjoy playing various instruments. In
+              my free time, I enjoy skating and swimming.
             </p>
             <p>
               I am also a chess enthusiast and you can challenge me on
