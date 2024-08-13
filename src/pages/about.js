@@ -22,10 +22,14 @@ const AboutPage = () => {
               production-ready software artifacts.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* <p>
 =======
             <p>
 >>>>>>> 5adaf4d (remove adsense from about page (#23))
+=======
+            {/* <p>
+>>>>>>> e11178e (update about page)
               My recent work includes the development of the
               <a
                 href="https://app.freemancapital.co"
