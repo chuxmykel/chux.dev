@@ -10,6 +10,7 @@
   },
   "scripts": {
     "dev": "gatsby develop",
+    "test": "echo 'No Tests Written'",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
