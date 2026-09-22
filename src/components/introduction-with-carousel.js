@@ -7,6 +7,7 @@ const titles = [
   "world class software engineer",
   "creative problem solver",
   "digital nomad",
+  "father of 2 amazing kids"
 ];
 
 export function IntroductionWithCarousel() {
