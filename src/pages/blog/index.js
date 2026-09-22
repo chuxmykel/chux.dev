@@ -1,10 +1,11 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import { FaClock } from "react-icons/fa";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
+import { Badge } from "../../ui/badge";
+import { ReadingTime } from "../../ui/reading-time";
 
 const readingTime = require("reading-time/lib/reading-time");
 
@@ -48,19 +49,11 @@ const BlogPage = ({ data }) => {
                 <p className="text-lg md:text-base">
                   {description.slice(0, 50)}...
                 </p>
-                <span className="flex items-center gap-2 text-sm mt-2 ">
-                  <FaClock />
-                  <p className="font-bold">{timeToRead}</p>
-                </span>
+                <ReadingTime time={timeToRead} className="text-sm mt-2" />
 
                 <div className="mt-3 flex justify-start gap-4">
                   {tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-slate-200 dark:bg-slate-700 px-2 py-1 md:py-0 rounded font-thin text-xs md:text-base"
-                    >
-                      {tag}
-                    </span>
+                    <Badge key={tag}>{tag}</Badge>
                   ))}
                 </div>
               </div>

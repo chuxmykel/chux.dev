@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import { Seo } from "../components/seo";
+import { ExternalLink } from "../ui/external-link";
 
 const AboutPage = () => {
   return (
@@ -27,19 +28,11 @@ const AboutPage = () => {
             </p>
             <p>
               I am also a chess enthusiast and you can challenge me on
-              <a
-                href="https://lichess.org/@/ChuxMyke"
-                rel="noreferrer"
-                target="_blank"
-              >
+              <ExternalLink href="https://lichess.org/@/ChuxMyke">
                 {` Lichess `}
-              </a>
+              </ExternalLink>
               or
-              <a
-                href="https://www.chess.com/member/chuxmykel"
-                rel="noreferrer"
-                target="_blank"
-              >{` chess.com`}</a>
+              <ExternalLink href="https://www.chess.com/member/chuxmykel">{` chess.com`}</ExternalLink>
               .
             </p>
             <p>

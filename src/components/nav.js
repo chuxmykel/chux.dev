@@ -10,6 +10,7 @@ import { Link } from "gatsby";
 
 import { ThemeContext } from "../context/theme.context";
 import { Logo } from "./logo";
+import { ExternalLink } from "../ui/external-link";
 
 export function Nav() {
   const menuItems = [
@@ -75,7 +76,7 @@ function Menu({ menuItems }) {
           const key = JSON.stringify(menuItem);
           if (menuItem.external) {
             return (
-              <ExternalLink
+              <ExternalMenuItem
                 href={menuItem.href}
                 label={menuItem.label}
                 key={key}
@@ -117,7 +118,7 @@ function Menu({ menuItems }) {
           const key = JSON.stringify(menuItem);
           if (menuItem.external) {
             return (
-              <ExternalLink
+              <ExternalMenuItem
                 href={menuItem.href}
                 label={menuItem.label}
                 key={key}
@@ -157,16 +158,15 @@ function Menu({ menuItems }) {
 const commonLinkClasses =
   "hover:bg-slate-300 dark:hover:bg-slate-700 dark:text-slate-400 rounded-full cursor-pointer";
 
-function ExternalLink({ href, label }) {
-  const externalLink = (
+function ExternalMenuItem({ href, label }) {
+  return (
     <CommonListItem>
-      <a href={href} target="_blank" rel="noreferrer" className="flex items-center gap-1">
+      <ExternalLink href={href} className="flex items-center gap-1">
         <span>{label}</span>
         <FaExternalLinkAlt className="h-3 w-3" />
-      </a>
+      </ExternalLink>
     </CommonListItem>
   );
-  return externalLink;
 }
 
 function HashLinkComponent({ href, label }) {
