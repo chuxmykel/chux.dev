@@ -9,9 +9,14 @@ export function Footer() {
         <span className="flex flex-col gap-4 text-slate-600 dark:text-slate-400">
           <div className="flex justify-end items-center gap-1">
             <MdCopyright className="inline" />
-            {`${new Date().getFullYear()} Copyright. Ngwobia, Chukwudi Mike`}
+            <span className="hidden md:inline">
+              {`${new Date().getFullYear()} Copyright. Ngwobia, Chukwudi Mike`}
+            </span>
+            <span className="inline md:hidden">
+              {`${new Date().getFullYear()} Copyright. Ngwobia, C. M.`}
+            </span>
           </div>
-          <div className="flex justify-end items-center gap-1 text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300 text-xs">
+          {/* <div className="flex justify-end items-center gap-1 text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300 text-xs">
             <a
               href="https://docs.google.com/document/d/1xiQ_McjCU5--qK6wNuQsJFambfVnM12OgEn9MpJ5fLE/edit?usp=sharing"
               target="_blank"
@@ -21,7 +26,7 @@ export function Footer() {
               Privacy Policy
             </a>
             <FaExternalLinkAlt />
-          </div>
+          </div> */}
         </span>
       </footer>
     </>
