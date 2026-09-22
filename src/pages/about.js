@@ -68,7 +68,7 @@ const AboutPage = () => {
               </a>
               or
               <a
-                href="https://www.chess.com/member/slimchux"
+                href="https://www.chess.com/member/chuxmykel"
                 rel="noreferrer"
                 target="_blank"
               >{` chess.com`}</a>
