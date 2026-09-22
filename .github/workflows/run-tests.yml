@@ -2,7 +2,7 @@ name: Run tests
 run-name: ${{ github.actor }} triggered a test run
 on: 
   push:
-    branches: [ develop, main ]
+    branches: [ main ]
   pull_request:
     branches: [ develop, main ]
 jobs:
