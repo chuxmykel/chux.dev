@@ -5,7 +5,7 @@ run-name: ${{ github.actor }} triggered a deployment
 on: 
   # Runs on pushes targeting the main branch
   push:
-    branches: [ 'develop', 'main' ]
+    branches: [ 'main' ]
 
   pull_request:
     branches: [ 'develop', 'main' ]
