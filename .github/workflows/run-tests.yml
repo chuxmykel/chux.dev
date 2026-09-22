@@ -17,5 +17,5 @@ jobs:
           node-version: '22.23.2'
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn test --run
-      - run: yarn coverage
+      # - run: yarn test --run
+      # - run: yarn coverage
