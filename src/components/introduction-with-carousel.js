@@ -1,61 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "gatsby";
+import { useTypewriter } from "../hooks/use-typewriter";
+
+const titles = [
+  "fullstack developer",
+  "world class software engineer",
+  "creative problem solver",
+  "digital nomad",
+  "father of 2 amazing kids"
+];
 
 export function IntroductionWithCarousel() {
-  const titles = [
-    "fullstack developer",
-    "world class software engineer",
-    "creative problem solver",
-    "digital nomad",
-  ];
-  const [title, setTitle] = useState(titles[0]);
-  const [titleIdx, setTitleIdx] = useState(0);
-  let delayTimeout;
+  const title = useTypewriter(titles);
 
-  async function typeTitle() {
-    if (title.length < 1) {
-      for (const char of titles[titleIdx]) {
-        setTitle((prevTitle) => prevTitle + char);
-        await delay(50);
-      }
-    } else {
-      await delay(1500);
-    }
-  }
-
-  async function deleteTitle() {
-    // eslint-disable-next-line no-unused-vars
-    for (let _ of titles[titleIdx]) {
-      setTitle((prevTitle) => prevTitle.slice(0, -1));
-      await delay(50);
-    }
-    await delay(200);
-  }
-
-  async function typeAndDeleteTitle() {
-    await typeTitle();
-    await delay(2500);
-    await deleteTitle();
-    setTitleIdx((prevIdx) => {
-      return (prevIdx + 1 + titles.length) % titles.length;
-    });
-  }
-
-  useEffect(() => {
-    (async () => {
-      typeAndDeleteTitle();
-    })();
-    return () => {
-      clearTimeout(delayTimeout);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [titleIdx]);
-
-  async function delay(ms) {
-    return new Promise((resolve) => {
-      delayTimeout = window.setTimeout(resolve, ms);
-    });
-  }
   return (
     <div className="flex flex-col items-start gap-5 min-w-full max-sm:h-60 h-52">
       <div className="min-w-full min-h-full text-slate-900 dark:text-slate-50">
@@ -69,9 +26,13 @@ export function IntroductionWithCarousel() {
             <Link to="/about">{` Chukwudi Ngwobia,`}</Link>
           </span>
         </p>
-        <span className="bg-slate-200 dark:bg-slate-700 text-2xl font-medium px-1 italic">
+        <span
+          className="bg-slate-200 dark:bg-slate-700 text-2xl font-medium px-1 italic"
+          aria-hidden="true"
+        >
           a {title}
         </span>
+        <span className="sr-only">a {titles.join(", ")}</span>
         <p className="text-3xl inline"> based in Nigeria.</p>
       </div>
 
