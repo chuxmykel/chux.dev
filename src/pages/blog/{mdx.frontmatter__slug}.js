@@ -2,11 +2,13 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXProvider } from "@mdx-js/react";
-import { FaClock } from "react-icons/fa";
 
 import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
 import { CodeBlock } from "../../components/code-block";
+import { Badge } from "../../ui/badge";
+import { ExternalLink } from "../../ui/external-link";
+import { ReadingTime } from "../../ui/reading-time";
 
 const readingTime = require("reading-time/lib/reading-time");
 
@@ -26,7 +28,7 @@ const BlogPost = ({ data, children }) => {
   const components = {
     pre: (props) => <div {...props} className="text-base md:text-lg"></div>,
     code: CodeBlock,
-    a: (props) => <a {...props} target="_blank" rel="noreferrer">{props.children}</a>
+    a: (props) => <ExternalLink {...props} />
   };
   const image = getImage(hero_image);
   return (
@@ -47,10 +49,7 @@ const BlogPost = ({ data, children }) => {
                   <p className="text-base font-semibold">
                     Published: {date}
                   </p>
-                  <span className="flex items-center -mt-8 text-sm gap-2">
-                    <FaClock />
-                    <p className="font-bold">{timeToRead}</p>
-                  </span>
+                  <ReadingTime time={timeToRead} className="-mt-8 text-sm" />
                 </div>
 
               </div>
@@ -60,25 +59,16 @@ const BlogPost = ({ data, children }) => {
               <div className="flex justify-center">
                 <p className="text-base italic">
                   Photo Credit:{" "}
-                  <a
-                    href={hero_image_credit_link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <ExternalLink href={hero_image_credit_link}>
                     {hero_image_credit_text}
-                  </a>
+                  </ExternalLink>
                 </p>
               </div>
             </div>
             <MDXProvider components={components}>{children}</MDXProvider>
             <div className="mt-20 flex justify-start gap-4">
               {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-slate-200 dark:bg-slate-700 px-2 py-1 md:py-0 rounded font-thin text-xs md:text-base"
-                >
-                  {tag}
-                </span>
+                <Badge key={tag}>{tag}</Badge>
               ))}
             </div>
           </article>

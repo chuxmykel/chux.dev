@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "gatsby";
+import colors from "tailwindcss/colors";
+
 import { useTypewriter } from "../hooks/use-typewriter";
+import { Button } from "../ui/button";
 
 const titles = [
   "fullstack developer",
   "world class software engineer",
   "creative problem solver",
   "digital nomad",
-  "father of 2 amazing kids"
+  "father of 2 amazing kids",
+  "senior software engineer",
+  "pragmatic solution finder",
 ];
 
 export function IntroductionWithCarousel() {
@@ -38,11 +43,32 @@ export function IntroductionWithCarousel() {
 
       <div className="mt-4">
         {/* FIXME: Link doesn't work for smooth scrolling so I use a tags for intra-app links */}
-        <a href="/#contact-me">
-          <button className="py-2 px-4 bg-slate-800 dark:bg-slate-100 text-slate-50 dark:text-slate-900 rounded-md active:scale-x-95 hover:animate-pulse text-xl font-semibold">
-            Contact Me
-          </button>
-        </a>
+        <Button
+          href="/#contact-me"
+          variant="text"
+          className="active:scale-x-95 hover:animate-pulse"
+          sx={{
+            backgroundColor: colors.slate[800],
+            color: colors.slate[50],
+            padding: "8px 16px",
+            borderRadius: "6px",
+            fontFamily: "inherit",
+            fontSize: "20px",
+            fontWeight: 600,
+            lineHeight: "28px",
+            letterSpacing: "normal",
+            textTransform: "none",
+            minWidth: 0,
+            "&:hover": { backgroundColor: colors.slate[800] },
+            ".dark &": {
+              backgroundColor: colors.slate[100],
+              color: colors.slate[900],
+            },
+            ".dark &:hover": { backgroundColor: colors.slate[100] },
+          }}
+        >
+          Contact Me
+        </Button>
       </div>
     </div>
   );

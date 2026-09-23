@@ -6,10 +6,10 @@ import {
   ThemeProvider as MUIThemeProvider,
   createTheme,
 } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 
 import { ThemeContext } from "../context/theme.context";
+import { TextField } from "../ui/text-field";
+import { Button } from "../ui/button";
 
 export function ContactMeForm() {
   const { theme } = useContext(ThemeContext);
@@ -119,7 +119,9 @@ export function ContactMeForm() {
       </h2>
       <p className="py-4 font-medium italic text-slate-900 dark:text-slate-50">
         Do you have any questions❓, business proposal📝 or just want to say
-        hi👋🏿, please drop me a message✉️.
+        hi<span className="dark:hidden">👋🏿</span>
+        <span className="hidden dark:inline">👋</span>, please drop me a
+        message✉️.
       </p>
       <div className="mb-10 w-full">
         <form

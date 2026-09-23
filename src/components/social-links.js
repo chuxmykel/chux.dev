@@ -2,6 +2,8 @@ import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BsMedium } from "react-icons/bs";
 
+import { ExternalLink } from "../ui/external-link";
+
 export function SocialLinks() {
   return (
     <div className="flex gap-4">
@@ -38,10 +40,8 @@ function SocialLink({ Icon, url, label }) {
   const socialLinkClasses =
     "h-8 w-8 hover:animate-bounce transition-all text-slate-900 dark:text-slate-50";
   return (
-    <>
-      <a href={url} target="_blank" aria-label={label} rel="noreferrer">
-        <Icon className={socialLinkClasses} />
-      </a>
-    </>
+    <ExternalLink href={url} aria-label={label}>
+      <Icon className={socialLinkClasses} />
+    </ExternalLink>
   );
 }
